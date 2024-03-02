@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { FontAwesomeIcon } from "../composables/faLibrary";
 
 const props = defineProps<{
+  /** Use "x" mark icon when disabled and check mark when enabled */
+  defaultIcon?: boolean;
+
   /** Hide label from screen (still available to screen readers) */
   hideLabel?: boolean;
 
@@ -64,7 +68,14 @@ function toggle() {
       <div
         class="flex justify-center p-1 w-6 min-h-[1.5rem] text-gray-50 bg-zinc-800 rounded-full shadow group-hover:shadow-md group-focus-visible:shadow-md motion-safe:duration-500"
         :class="{ 'translate-x-full': isChecked }"
-      ></div>
+      >
+        <slot name="icon">
+          <FontAwesomeIcon
+            v-if="defaultIcon"
+            :icon="isChecked ? 'check' : 'xmark'"
+          />
+        </slot>
+      </div>
     </div>
   </div>
 </template>
