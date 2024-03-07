@@ -908,6 +908,16 @@ video {
   .sm\:p-5 {
     padding: 1.25rem;
   }
+
+  .sm\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  .sm\:py-10 {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
