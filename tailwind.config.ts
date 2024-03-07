@@ -12,6 +12,9 @@ module.exports = {
           DEFAULT: '1px 1px 3px 0 #000a',
           md: '2px 2px 6px 1px #000a'
         },
+        transitionProperty: {
+          fade: 'opacity, visibility, background-color, color, transform'
+        }
       },
     },
     plugins: [],
