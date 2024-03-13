@@ -609,6 +609,10 @@ video {
   cursor: pointer;
 }
 
+.list-none {
+  list-style-type: none;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -652,6 +656,11 @@ video {
 .bg-blue-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(96 165 250 / var(--tw-bg-opacity));
+}
+
+.bg-blue-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 64 175 / var(--tw-bg-opacity));
 }
 
 .bg-emerald-200 {
@@ -822,6 +831,22 @@ video {
   transition-duration: 200ms;
 }
 
+.hover\:bg-gray-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.hover\:text-zinc-900:hover {
+  --tw-text-opacity: 1;
+  color: rgb(24 24 27 / var(--tw-text-opacity));
+}
+
+.hover\:shadow-full:hover {
+  --tw-shadow:  0 0 6px 0 #000a;
+  --tw-shadow-colored: 0 0 6px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .group:hover .group-hover\:shadow-md {
   --tw-shadow: 2px 2px 6px 1px #000a;
   --tw-shadow-colored: 2px 2px 6px 1px var(--tw-shadow-color);
@@ -847,6 +872,11 @@ video {
 :is(.dark .dark\:border-white) {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+:is(.dark .dark\:bg-blue-200) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
 }
 
 :is(.dark .dark\:bg-blue-999) {
@@ -935,6 +965,22 @@ video {
 }
 
 :is(.dark .dark\:shadow-none) {
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+:is(.dark .dark\:hover\:bg-zinc-500:hover) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(113 113 122 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:hover\:text-zinc-50:hover) {
+  --tw-text-opacity: 1;
+  color: rgb(250 250 250 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:hover\:shadow-none:hover) {
   --tw-shadow: 0 0 #0000;
   --tw-shadow-colored: 0 0 #0000;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
