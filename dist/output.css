@@ -977,4 +977,8 @@ video {
   .lg\:mt-14 {
     margin-top: 3.5rem;
   }
+
+  .lg\:flex-grow-0 {
+    flex-grow: 0;
+  }
 }
