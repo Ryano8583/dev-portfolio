@@ -641,6 +641,18 @@ li,
   cursor: pointer;
 }
 
+.list-inside {
+  list-style-position: inside;
+}
+
+.list-\[circle\] {
+  list-style-type: circle;
+}
+
+.list-disc {
+  list-style-type: disc;
+}
+
 .list-none {
   list-style-type: none;
 }
@@ -807,6 +819,10 @@ li,
 
 .p-4 {
   padding: 1rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .text-4xl {
