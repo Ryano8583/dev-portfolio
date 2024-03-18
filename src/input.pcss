@@ -3,6 +3,19 @@
 @tailwind utilities;
 
 @layer base {
+  h2,
+  div {
+    &.fade-in-b {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    &.fade-out-t {
+      opacity: 0;
+      transform: translateY(-4rem);
+    }
+  }
+
   li,
   p {
     @apply text-zinc-900 dark:text-zinc-50;
