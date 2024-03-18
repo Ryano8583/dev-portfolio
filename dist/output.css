@@ -444,6 +444,18 @@ video {
   display: none;
 }
 
+h2,
+  div {
+  &.fade-in-b {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  &.fade-out-t {
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+}
+
 li,
   p {
   --tw-text-opacity: 1;
