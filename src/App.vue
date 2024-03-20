@@ -30,11 +30,13 @@ function ensureDisplay() {
     <TheHeader>Ryan Overmyer's Resume & Portfolio</TheHeader>
 
     <BaseNavigation>
-      <BaseNavLink to="resume">Resume</BaseNavLink>
-      <BaseNavLink to="portfolio">Portfolio</BaseNavLink>
+      <BaseNavLink to="resume" @focusin="ensureDisplay">Resume</BaseNavLink>
+      <BaseNavLink to="portfolio" @focusin="ensureDisplay"
+        >Portfolio</BaseNavLink
+      >
     </BaseNavigation>
 
-    <TheThemeToggle />
+    <TheThemeToggle @focusin="ensureDisplay" />
   </TheTopBar>
 
   <router-view />
