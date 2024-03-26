@@ -7,6 +7,8 @@ import LayoutSection from "@/components/LayoutSection.vue";
 
 import TheMain from "@/components/TheMain.vue";
 
+import HtmlTemplate from "@/portfolio/HtmlTemplate.vue";
+
 onMounted(timeToObserve);
 onBeforeUnmount(() => {
   observerHeadings.disconnect();
@@ -21,8 +23,9 @@ function timeToObserve() {
 
 <template>
   <TheMain>
-    <LayoutSection id="section-5" heading="">
+    <LayoutSection id="section-5" heading="HTML Template">
       <LayoutContainer>
+        <HtmlTemplate />
       </LayoutContainer>
     </LayoutSection>
   </TheMain>
