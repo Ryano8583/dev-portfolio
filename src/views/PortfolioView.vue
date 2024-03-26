@@ -9,6 +9,7 @@ import TheMain from "@/components/TheMain.vue";
 
 import CalloutBoxes from "@/portfolio/CalloutBoxes.vue";
 import HtmlTemplate from "@/portfolio/HtmlTemplate.vue";
+import TimeLines from "@/portfolio/TimeLines.vue";
 
 onMounted(timeToObserve);
 onBeforeUnmount(() => {
@@ -33,6 +34,12 @@ function timeToObserve() {
     <LayoutSection id="section-6" heading="Callout Boxes">
       <LayoutContainer>
         <CalloutBoxes />
+      </LayoutContainer>
+    </LayoutSection>
+
+    <LayoutSection id="section-7" heading="Timelines">
+      <LayoutContainer>
+        <TimeLines />
       </LayoutContainer>
     </LayoutSection>
   </TheMain>
