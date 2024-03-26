@@ -7,6 +7,7 @@ import LayoutSection from "@/components/LayoutSection.vue";
 
 import TheMain from "@/components/TheMain.vue";
 
+import CalloutBoxes from "@/portfolio/CalloutBoxes.vue";
 import HtmlTemplate from "@/portfolio/HtmlTemplate.vue";
 
 onMounted(timeToObserve);
@@ -26,6 +27,12 @@ function timeToObserve() {
     <LayoutSection id="section-5" heading="HTML Template">
       <LayoutContainer>
         <HtmlTemplate />
+      </LayoutContainer>
+    </LayoutSection>
+
+    <LayoutSection id="section-6" heading="Callout Boxes">
+      <LayoutContainer>
+        <CalloutBoxes />
       </LayoutContainer>
     </LayoutSection>
   </TheMain>
