@@ -9,6 +9,7 @@ import TheMain from "@/components/TheMain.vue";
 
 import CalloutBoxes from "@/portfolio/CalloutBoxes.vue";
 import HtmlTemplate from "@/portfolio/HtmlTemplate.vue";
+import InlineQuestion from "@/portfolio/InlineQuestion.vue";
 import TimeLines from "@/portfolio/TimeLines.vue";
 
 onMounted(timeToObserve);
@@ -40,6 +41,12 @@ function timeToObserve() {
     <LayoutSection id="section-7" heading="Timelines">
       <LayoutContainer>
         <TimeLines />
+      </LayoutContainer>
+    </LayoutSection>
+
+    <LayoutSection id="section-8" heading="Inline Question">
+      <LayoutContainer>
+        <InlineQuestion />
       </LayoutContainer>
     </LayoutSection>
   </TheMain>
