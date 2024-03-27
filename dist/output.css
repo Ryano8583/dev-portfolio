@@ -1327,16 +1327,8 @@ li,
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .motion-safe\:duration-200 {
-    transition-duration: 200ms;
-  }
-
   .motion-safe\:duration-400 {
     transition-duration: 400ms;
-  }
-
-  .motion-safe\:duration-500 {
-    transition-duration: 500ms;
   }
 }
 
