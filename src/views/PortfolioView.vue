@@ -8,6 +8,7 @@ import LayoutSection from "@/components/LayoutSection.vue";
 import TheMain from "@/components/TheMain.vue";
 
 import CalloutBoxes from "@/portfolio/CalloutBoxes.vue";
+import CollapsibleContent from "@/portfolio/CollapsibleContent.vue";
 import HtmlTemplate from "@/portfolio/HtmlTemplate.vue";
 import InlineQuestion from "@/portfolio/InlineQuestion.vue";
 import TimeLines from "@/portfolio/TimeLines.vue";
@@ -47,6 +48,12 @@ function timeToObserve() {
     <LayoutSection id="section-8" heading="Inline Question">
       <LayoutContainer>
         <InlineQuestion />
+      </LayoutContainer>
+    </LayoutSection>
+
+    <LayoutSection id="section-9" heading="Collapsible Menu">
+      <LayoutContainer>
+        <CollapsibleContent />
       </LayoutContainer>
     </LayoutSection>
   </TheMain>
