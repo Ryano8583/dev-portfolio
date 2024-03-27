@@ -7,6 +7,10 @@ module.exports = {
     darkMode: 'class',
     theme: {
       extend: {
+        animation: {
+          rotateDown: 'rotateDown 0.4s ease-in-out forwards',
+          rotateUp: 'rotateUp 0.4s ease-in-out forwards',
+        },
         boxShadow: {
           inner: 'inset 1px 1px 3px 0 #0008',
           DEFAULT: '1px 1px 3px 0 #000a',
@@ -29,6 +33,19 @@ module.exports = {
           purple: {
             999: '#300E48'
           }
+        },
+        keyframes: {
+          rotateDown: {
+            '0%': { transform: 'rotate(180deg)' },
+            '100%': { transform: 'rotate(360deg)' },
+          },
+          rotateUp: {
+            '0%': { transform: 'rotate(0)' },
+            '100%': { transform: 'rotate(180deg)' },
+          },
+        },
+        transitionDuration: {
+          '400': '400ms',
         },
         transitionProperty: {
           fade: 'opacity, visibility, background-color, color, transform'
