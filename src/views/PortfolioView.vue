@@ -9,6 +9,7 @@ import TheMain from "@/components/TheMain.vue";
 
 import CalloutBoxes from "@/portfolio/CalloutBoxes.vue";
 import CollapsibleContent from "@/portfolio/CollapsibleContent.vue";
+import FlipCard from '@/portfolio/FlipCard.vue';
 import HtmlTemplate from "@/portfolio/HtmlTemplate.vue";
 import InlineQuestion from "@/portfolio/InlineQuestion.vue";
 import TabMenus from "@/portfolio/TabMenus.vue";
@@ -58,9 +59,15 @@ function timeToObserve() {
       </LayoutContainer>
     </LayoutSection>
 
-    <LayoutSection id="section-x" heading="Tab Menus">
+    <LayoutSection id="section-10" heading="Tab Menus">
       <LayoutContainer>
         <TabMenus />
+      </LayoutContainer>
+    </LayoutSection>
+
+    <LayoutSection id="section-11" heading="Flip Card">
+      <LayoutContainer>
+        <FlipCard />
       </LayoutContainer>
     </LayoutSection>
   </TheMain>
