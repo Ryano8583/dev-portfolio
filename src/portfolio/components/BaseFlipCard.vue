@@ -1,40 +1,36 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 
 defineProps<{
   /** If non-decorative image is used for the back side */
-  altBack?: string
+  altBack?: string;
 
   /** If non-decorative image is used for the front side */
-  altFront?: string
+  altFront?: string;
 
   /** Text for if a heading is to be used on the back side */
-  headingBack?: string
+  headingBack?: string;
 
   /** Text for if a heading is to be used on the front side */
-  headingFront?: string
+  headingFront?: string;
 
   /** File name and type, if a sole image is to be used on the back side */
-  imageBack?: string
+  imageBack?: string;
 
   /** File name and type, if a sole image is to be used on the front side */
-  imageFront?: string
-}>()
+  imageFront?: string;
+}>();
 
-const isFlipped = ref(false)
+const isFlipped = ref(false);
 
 function flip() {
-  isFlipped.value = !isFlipped.value
+  isFlipped.value = !isFlipped.value;
 }
 </script>
-
-
 
 <!-- NOTE: uses a custom class from the tailwind.config.js !!!!! 
   shadow.full
 -->
-
-
 
 <template>
   <div
@@ -50,26 +46,43 @@ function flip() {
       tabindex="0"
       data-card="container"
     >
-      <div class="print:block" :class="isFlipped ? 'hidden' : 'block'" data-card="side">
+      <div
+        class="print:block"
+        :class="isFlipped ? 'hidden' : 'block'"
+        data-card="side"
+      >
         <p class="hidden print:block">** Front of the flip card **</p>
 
-        <img v-if="imageFront" :src="imageFront" class="" :alt="altFront ?? ''" />
+        <img
+          v-if="imageFront"
+          :src="imageFront"
+          class=""
+          :alt="altFront ?? ''"
+        />
 
         <span v-else-if="headingFront">
-          <h3 class="mb-2 text-3xl text-zinc-900 dark:text-zinc-50">{{ headingFront }}</h3>
+          <h3 class="mb-2 text-3xl text-zinc-900 dark:text-zinc-50">
+            {{ headingFront }}
+          </h3>
           <slot name="front-content" />
         </span>
       </div>
 
       <hr class="hidden print:block print:w-11/12" />
 
-      <div class="print:block" :class="isFlipped ? 'block apply-flip' : 'hidden'" data-card="side">
+      <div
+        class="print:block"
+        :class="isFlipped ? 'block apply-flip' : 'hidden'"
+        data-card="side"
+      >
         <p class="hidden print:block">** Back of the flip card **</p>
 
         <img v-if="imageBack" :src="imageBack" class="" :alt="altBack ?? ''" />
 
         <span v-else-if="headingBack">
-          <h3 class="mb-2 text-3xl text-zinc-900 dark:text-zinc-50">{{ headingBack }}</h3>
+          <h3 class="mb-2 text-3xl text-zinc-900 dark:text-zinc-50">
+            {{ headingBack }}
+          </h3>
           <slot name="back-content" />
         </span>
       </div>
@@ -78,11 +91,11 @@ function flip() {
 </template>
 
 <style lang="scss">
-[data-card='container'] {
+[data-card="container"] {
   transform-style: preserve-3d;
   perspective: 1000px;
 
-  [data-card='side'] {
+  [data-card="side"] {
     backface-visibility: hidden;
   }
 }
@@ -92,7 +105,7 @@ function flip() {
 }
 
 @media print {
-  [data-card='container'] {
+  [data-card="container"] {
     transform-style: unset;
   }
 
