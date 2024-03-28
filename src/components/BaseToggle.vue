@@ -38,7 +38,7 @@ function toggle() {
 
 <template>
   <div
-    class="flex gap-3 items-center motion-safe:duration-200 sm:gap-5"
+    class="flex gap-3 items-center motion-safe:duration-400 sm:gap-5"
     role="none"
   >
     <div
@@ -50,7 +50,7 @@ function toggle() {
     </div>
 
     <div
-      class="group p-1 w-fit min-w-[3.5rem] rounded-full shadow-inner motion-safe:duration-500 cursor-pointer"
+      class="group p-1 w-fit min-w-[3.5rem] rounded-full shadow-inner motion-safe:duration-400 cursor-pointer"
       :class="{
         'bg-zinc-200': !isChecked,
         'bg-emerald-600 dark:bg-emerald-200': props.useGreen && isChecked,
@@ -66,7 +66,7 @@ function toggle() {
       @keydown.space.prevent="toggle"
     >
       <div
-        class="flex justify-center p-1 w-6 min-h-[1.5rem] text-gray-50 bg-zinc-800 rounded-full shadow group-hover:shadow-md group-focus-visible:shadow-md motion-safe:duration-500"
+        class="flex justify-center p-1 w-6 min-h-[1.5rem] text-gray-50 bg-zinc-800 rounded-full shadow group-hover:shadow-md group-focus-visible:shadow-md motion-safe:duration-400"
         :class="{ 'translate-x-full': isChecked }"
       >
         <slot name="icon">

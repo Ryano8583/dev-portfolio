@@ -13,8 +13,7 @@ onBeforeUnmount(() => {
 });
 
 function timeToObserve() {
-  const targets = document.querySelectorAll("section");
-  for (const target of targets) {
+  for (const target of document.querySelectorAll("section")) {
     observerHeadings.observe(target);
   }
 }
