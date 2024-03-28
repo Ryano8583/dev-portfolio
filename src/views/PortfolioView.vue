@@ -11,6 +11,7 @@ import CalloutBoxes from "@/portfolio/CalloutBoxes.vue";
 import CollapsibleContent from "@/portfolio/CollapsibleContent.vue";
 import HtmlTemplate from "@/portfolio/HtmlTemplate.vue";
 import InlineQuestion from "@/portfolio/InlineQuestion.vue";
+import TabMenus from "@/portfolio/TabMenus.vue";
 import TimeLines from "@/portfolio/TimeLines.vue";
 
 onMounted(timeToObserve);
@@ -54,6 +55,12 @@ function timeToObserve() {
     <LayoutSection id="section-9" heading="Collapsible Menu">
       <LayoutContainer>
         <CollapsibleContent />
+      </LayoutContainer>
+    </LayoutSection>
+
+    <LayoutSection id="section-x" heading="Tab Menus">
+      <LayoutContainer>
+        <TabMenus />
       </LayoutContainer>
     </LayoutSection>
   </TheMain>
