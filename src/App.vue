@@ -29,6 +29,7 @@ function ensureDisplay() {
   <TheTopBar>
     <TheHeader>Ryan Overmyer's Resume & Portfolio</TheHeader>
 
+    <div class="flex flex-grow justify-end items-center gap-3 sm:gap-5">
     <BaseNavigation>
       <BaseNavLink to="resume" @focusin="ensureDisplay">Resume</BaseNavLink>
       <BaseNavLink to="portfolio" @focusin="ensureDisplay"
@@ -37,6 +38,7 @@ function ensureDisplay() {
     </BaseNavigation>
 
     <TheThemeToggle @focusin="ensureDisplay" />
+    </div>
   </TheTopBar>
 
   <router-view />
