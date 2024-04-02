@@ -16,6 +16,16 @@ const router = createRouter({
       component: PortfolioView,
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    return new Promise((resolve, reject) => {
+      if (savedPosition) {
+        resolve(savedPosition);
+        return;
+      }
+      resolve({ top: 0 });
+    });
+  },
 });
 
 export default router;
