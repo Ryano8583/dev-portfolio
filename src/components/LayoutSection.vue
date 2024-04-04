@@ -20,6 +20,9 @@ defineProps<{
 
   /** Purple background */
   usePurple?: boolean;
+
+  /** Heading includes long word that will need to break */
+  wordBreak?: boolean;
 }>();
 </script>
 
@@ -43,6 +46,7 @@ defineProps<{
   >
     <h2
       class="opacity-0 mb-3 text-5xl font-bold text-zinc-900 dark:text-zinc-50 translate-y-48 transition-fade duration-200 sm:mb-5"
+      :class="{ 'break-words': wordBreak }"
     >
       {{ heading }}
     </h2>

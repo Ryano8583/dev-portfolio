@@ -77,7 +77,12 @@ function timeToObserve() {
       </LayoutColumn>
     </LayoutSection>
 
-    <LayoutSection id="section-4" heading="Accomplishments" use-orange>
+    <LayoutSection
+      id="section-4"
+      heading="Accomplishments"
+      use-orange
+      word-break
+    >
       <div
         class="opacity-0 translate-y-48 transition-fade duration-200"
         data-transitional-content
