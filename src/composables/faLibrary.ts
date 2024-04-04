@@ -1,4 +1,5 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
+import { faLinkedin, faSquareGithub } from "@fortawesome/free-brands-svg-icons";
 import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 import {
   faCheck,
@@ -14,7 +15,9 @@ library.add(
   faChevronCircleDown,
   faCircleInfo,
   faCircleQuestion,
+  faLinkedin,
   faMoon,
+  faSquareGithub,
   faSun,
   faXmark,
 );

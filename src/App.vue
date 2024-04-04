@@ -30,14 +30,14 @@ function ensureDisplay() {
     <TheHeader>Ryan Overmyer's Resume & Portfolio</TheHeader>
 
     <div class="flex flex-grow justify-end items-center gap-3 sm:gap-5">
-    <BaseNavigation>
-      <BaseNavLink to="resume" @focusin="ensureDisplay">Resume</BaseNavLink>
-      <BaseNavLink to="portfolio" @focusin="ensureDisplay"
-        >Portfolio</BaseNavLink
-      >
-    </BaseNavigation>
+      <BaseNavigation>
+        <BaseNavLink to="resume" @focusin="ensureDisplay">Resume</BaseNavLink>
+        <BaseNavLink to="portfolio" @focusin="ensureDisplay"
+          >Portfolio</BaseNavLink
+        >
+      </BaseNavigation>
 
-    <TheThemeToggle @focusin="ensureDisplay" />
+      <TheThemeToggle @focusin="ensureDisplay" />
     </div>
   </TheTopBar>
 
