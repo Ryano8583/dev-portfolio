@@ -650,6 +650,11 @@ li,
   clear: both;
 }
 
+.mx-\[0\.15rem\] {
+  margin-left: 0.15rem;
+  margin-right: 0.15rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1175,6 +1180,10 @@ li,
 
 .text-center {
   text-align: center;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .text-2xl {
