@@ -146,7 +146,7 @@ function updateForNextTab(index: number) {
       :class="{ 'sm:flex-row': !props.useVertical }"
     >
       <button
-        class="w-full py-4 px-5 border-solid border-[1.5px] border-b-0 rounded-t-md sm:rounded-tr-none border-zinc-900 dark:border-white bg-gray-100 hover:bg-gray-200 focus-visible:z-10 focus-visible:outline-offset-2 dark:bg-zinc-600 dark:hover:bg-zinc-500 text-center text-base font-bold text-zinc-900 dark:text-zinc-50"
+        class="w-full py-4 px-5 border-solid border-[1.5px] border-b-0 rounded-t-md sm:rounded-tr-none border-zinc-900 dark:border-white bg-gray-100 hover:bg-gray-200 focus-visible:z-10 focus-visible:outline-offset-4 dark:bg-zinc-600 dark:hover:bg-zinc-500 text-center text-base font-bold text-zinc-900 dark:text-zinc-50"
         :class="{ 'flex-grow sm:border-r-0': props.useVertical }"
         role="tab"
         :aria-controls="`${(first = setId('panel'))}`"
@@ -157,7 +157,7 @@ function updateForNextTab(index: number) {
         <slot name="headingOne" />
       </button>
       <button
-        class="w-full py-4 px-5 border-solid border-[1.5px] border-b-0 border-zinc-900 dark:border-white bg-gray-100 hover:bg-gray-200 focus-visible:z-10 focus-visible:outline-offset-2 dark:bg-zinc-600 dark:hover:bg-zinc-500 text-center text-base font-bold text-zinc-900 dark:text-zinc-50"
+        class="w-full py-4 px-5 border-solid border-[1.5px] border-b-0 border-zinc-900 dark:border-white bg-gray-100 hover:bg-gray-200 focus-visible:z-10 focus-visible:outline-offset-4 dark:bg-zinc-600 dark:hover:bg-zinc-500 text-center text-base font-bold text-zinc-900 dark:text-zinc-50"
         :class="{
           'flex-grow sm:border-r-0 last:border-b-[1.5px] sm:last:rounded-bl-md':
             props.useVertical,
@@ -174,7 +174,7 @@ function updateForNextTab(index: number) {
       </button>
       <button
         v-if="parseInt(props.tabCount) >= 3"
-        class="w-full py-4 px-5 border-solid border-[1.5px] border-b-0 border-zinc-900 dark:border-white bg-gray-100 hover:bg-gray-200 focus-visible:z-10 focus-visible:outline-offset-2 dark:bg-zinc-600 dark:hover:bg-zinc-500 text-center text-base font-bold text-zinc-900 dark:text-zinc-50"
+        class="w-full py-4 px-5 border-solid border-[1.5px] border-b-0 border-zinc-900 dark:border-white bg-gray-100 hover:bg-gray-200 focus-visible:z-10 focus-visible:outline-offset-4 dark:bg-zinc-600 dark:hover:bg-zinc-500 text-center text-base font-bold text-zinc-900 dark:text-zinc-50"
         :class="{
           'flex-grow sm:border-r-0 sm:last:border-b-[1.5px] sm:last:rounded-bl-md':
             props.useVertical,
@@ -191,7 +191,7 @@ function updateForNextTab(index: number) {
       </button>
       <button
         v-if="parseInt(props.tabCount) === 4"
-        class="w-full py-4 px-5 border-solid border-[1.5px] border-b-0 border-zinc-900 dark:border-white bg-gray-100 hover:bg-gray-200 focus-visible:z-10 focus-visible:outline-offset-2 dark:bg-zinc-600 dark:hover:bg-zinc-500 text-center text-base font-bold text-zinc-900 dark:text-zinc-50"
+        class="w-full py-4 px-5 border-solid border-[1.5px] border-b-0 border-zinc-900 dark:border-white bg-gray-100 hover:bg-gray-200 focus-visible:z-10 focus-visible:outline-offset-4 dark:bg-zinc-600 dark:hover:bg-zinc-500 text-center text-base font-bold text-zinc-900 dark:text-zinc-50"
         :class="{
           'flex-grow sm:border-r-0 last:border-b-[1.5px] sm:last:rounded-bl-md':
             props.useVertical,
@@ -211,7 +211,7 @@ function updateForNextTab(index: number) {
     <div
       :id="`${first}`"
       role="tabpanel"
-      class="relative opacity-0 invisible border-solid border-[1.5px] border-zinc-900 dark:border-white dark:bg-gray-600 p-4 focus-visible:z-10 focus-visible:outline-offset-2 current-selection"
+      class="relative opacity-0 invisible border-solid border-[1.5px] border-zinc-900 dark:border-white dark:bg-gray-600 p-4 focus-visible:z-10 focus-visible:outline-offset-4 current-selection"
       :class="{ 'sm:border-t-[1px]': props.useVertical }"
       tabindex="0"
     >
@@ -220,7 +220,7 @@ function updateForNextTab(index: number) {
     <div
       :id="`${second}`"
       role="tabpanel"
-      class="relative opacity-0 invisible border-solid border-[1.5px] border-zinc-900 dark:border-white dark:bg-gray-600 p-4 focus-visible:z-10 focus-visible:outline-offset-2"
+      class="relative opacity-0 invisible border-solid border-[1.5px] border-zinc-900 dark:border-white dark:bg-gray-600 p-4 focus-visible:z-10 focus-visible:outline-offset-4"
       :class="{ 'sm:border-t-[1px]': props.useVertical }"
       tabindex="0"
       hidden
@@ -230,7 +230,7 @@ function updateForNextTab(index: number) {
     <div
       v-if="parseInt(props.tabCount) >= 3"
       :id="`${third}`"
-      class="relative opacity-0 invisible border-solid border-[1.5px] border-zinc-900 dark:border-white dark:bg-gray-600 p-4 focus-visible:z-10 focus-visible:outline-offset-2"
+      class="relative opacity-0 invisible border-solid border-[1.5px] border-zinc-900 dark:border-white dark:bg-gray-600 p-4 focus-visible:z-10 focus-visible:outline-offset-4"
       :class="{ 'sm:border-t-[1px]': props.useVertical }"
       tabindex="0"
       hidden
@@ -240,7 +240,7 @@ function updateForNextTab(index: number) {
     <div
       v-if="parseInt(props.tabCount) === 4"
       :id="`${fourth}`"
-      class="relative opacity-0 invisible border-solid border-[1.5px] border-zinc-900 dark:border-white dark:bg-gray-600 p-4 focus-visible:z-10 focus-visible:outline-offset-2"
+      class="relative opacity-0 invisible border-solid border-[1.5px] border-zinc-900 dark:border-white dark:bg-gray-600 p-4 focus-visible:z-10 focus-visible:outline-offset-4"
       :class="{ 'sm:border-t-[1px]': props.useVertical }"
       tabindex="0"
       hidden

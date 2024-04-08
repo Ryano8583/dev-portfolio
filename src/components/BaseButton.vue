@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <button
-    class="p-2 text-gray-50 dark:text-gray-900 rounded-md"
+    class="p-2 text-gray-50 dark:text-gray-900 rounded-md focus-visible:outline-offset-4"
     :class="
       useGreen
         ? 'bg-emerald-600 dark:bg-emerald-200'

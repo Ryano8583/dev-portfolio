@@ -71,7 +71,9 @@ import LayoutColumn from "@/components/LayoutColumn.vue";
         <p>
           There are many sites and resources you can use for checking color
           contrast. The one I prefer to use is
-          <a href="https://webaim.org/resources/contrastchecker/"
+          <a
+            class="underline"
+            href="https://webaim.org/resources/contrastchecker/"
             >WebAIM's Contrast Checker</a
           >.
         </p>
