@@ -28,10 +28,6 @@ function flip() {
 }
 </script>
 
-<!-- NOTE: uses a custom class from the tailwind.config.js !!!!! 
-  shadow.full
--->
-
 <template>
   <div
     class="flex flex-col my-0 mx-auto py-4 px-2 overflow-hidden cursor-pointer"

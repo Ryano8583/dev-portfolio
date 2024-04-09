@@ -17,7 +17,7 @@ module.exports = {
           md: '2px 2px 6px 1px #000a',
           full: ' 0 0 6px 0 #000a',
           card: '0 4px 8px 0 #000a',
-          'card-hover': '0 4px 12x 0 #000a',
+          'card-hover': '0 4px 12px 0 #000a',
           'card-dark': '0 4px 8px 0 #cbd5e1',
           'card-dark-hover': '0 4px 12px 0 #cbd5e1'
         },
