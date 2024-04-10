@@ -28,10 +28,6 @@ function flip() {
 }
 </script>
 
-<!-- NOTE: uses a custom class from the tailwind.config.js !!!!! 
-  shadow.full
--->
-
 <template>
   <div
     class="flex flex-col my-0 mx-auto py-4 px-2 overflow-hidden cursor-pointer"
@@ -41,7 +37,7 @@ function flip() {
     @keydown.space.prevent="flip"
   >
     <div
-      class="flex flex-col flex-1 p-3 bg-white shadow-card transition-transform duration-700 hover:shadow-card-hover focus-visible:outline-offset-[3px] focus-visible:shadow-none dark:bg-zinc-600 dark:shadow-card-dark dark:hover:shadow-card-dark-hover dark:focus-visible:shadow-none print:gap-4"
+      class="flex flex-col flex-1 p-3 bg-white shadow-card transition-transform duration-700 hover:shadow-card-hover focus-visible:outline-offset-4 focus-visible:shadow-none dark:bg-zinc-600 dark:shadow-card-dark dark:hover:shadow-card-dark-hover dark:focus-visible:shadow-none print:gap-4"
       :class="{ 'apply-flip': isFlipped }"
       tabindex="0"
       data-card="container"

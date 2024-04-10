@@ -50,8 +50,15 @@ function timeToObserve() {
         <div>
           <p>Information Technology</p>
           <p>Indiana Wesleyan University</p>
-          <p>March 2017 - Present</p>
+          <p>November 2017 - Present</p>
           <p>LMS Administrator</p>
+        </div>
+
+        <div>
+          <p>Information Technology</p>
+          <p>Indiana Wesleyan University</p>
+          <p>March 2017 - November 2017</p>
+          <p>LMS Administrator Assistant</p>
         </div>
 
         <div>

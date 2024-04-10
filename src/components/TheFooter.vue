@@ -10,13 +10,13 @@ import { FontAwesomeIcon } from "../composables/faLibrary";
       <a href="https://github.com/Ryano8583/dev-portfolio">
         <FontAwesomeIcon
           :icon="['fab', 'square-github']"
-          class="h-8 cursor-pointer text-zinc-900 dark:text-zinc-50"
+          class="mx-[0.15rem] h-8 cursor-pointer text-zinc-900 align-middle dark:text-zinc-50"
         />
       </a>
       <a href="https://www.linkedin.com/in/ryan-overmyer-8b1353107/">
         <FontAwesomeIcon
           :icon="['fab', 'linkedin']"
-          class="h-8 cursor-pointer text-zinc-900 dark:text-zinc-50"
+          class="mx-[0.15rem] h-8 cursor-pointer text-zinc-900 align-middle dark:text-zinc-50"
         />
       </a>
     </div>

@@ -15,9 +15,10 @@ module.exports = {
           inner: 'inset 1px 1px 3px 0 #0008',
           DEFAULT: '1px 1px 3px 0 #000a',
           md: '2px 2px 6px 1px #000a',
+          lg: '3px 4px 10px 2px #000A',
           full: ' 0 0 6px 0 #000a',
           card: '0 4px 8px 0 #000a',
-          'card-hover': '0 4px 12x 0 #000a',
+          'card-hover': '0 4px 12px 0 #000a',
           'card-dark': '0 4px 8px 0 #cbd5e1',
           'card-dark-hover': '0 4px 12px 0 #cbd5e1'
         },

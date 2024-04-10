@@ -22,7 +22,11 @@ function toggle() {
     />
     <LayoutColumn class="my-4 w-full">
       <slot name="question" />
-      <BaseButton class="mt-4 w-fit" :aria-expanded="isExpanded" @click="toggle"
+      <BaseButton
+        class="mt-4 w-fit"
+        use-blue
+        :aria-expanded="isExpanded"
+        @click="toggle"
         >{{ isExpanded ? "Hide" : "Reveal" }} Answer</BaseButton
       >
       <div class="mt-4" :class="isExpanded ? '' : 'invisible hidden'">

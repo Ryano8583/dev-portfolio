@@ -17,7 +17,7 @@ function toggle() {
 <template>
   <div class="p-4">
     <div
-      class="mx-auto p-3 border-[1.5px] rounded-md border-zinc-900 font-bold text-zinc-900 cursor-pointer motion-safe:duration-400 focus-visible:outline-offset-2 dark:border-white"
+      class="mx-auto p-3 border-[1.5px] rounded-md border-zinc-900 font-bold text-zinc-900 cursor-pointer motion-safe:transition-colors motion-safe:duration-400 focus-visible:outline-offset-4 dark:border-white"
       :class="
         isExpanded
           ? 'rounded-b-none bg-blue-200 hover:bg-blue-100 focus-visible:bg-blue-100'

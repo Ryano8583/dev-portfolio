@@ -18,8 +18,8 @@ const props = defineProps<{
    */
   modelValue?: boolean;
 
-  /** Green background */
-  useGreen?: boolean;
+  /** Blue background */
+  useBlue?: boolean;
 
   /** Red background */
   useRed?: boolean;
@@ -37,10 +37,7 @@ function toggle() {
 </script>
 
 <template>
-  <div
-    class="flex gap-3 items-center motion-safe:duration-400 sm:gap-5"
-    role="none"
-  >
+  <div class="flex gap-3 items-center sm:gap-5" role="none">
     <div
       :id="id"
       class="text-gray-900 dark:text-gray-50"
@@ -50,12 +47,12 @@ function toggle() {
     </div>
 
     <div
-      class="group p-1 w-fit min-w-[3.5rem] rounded-full shadow-inner motion-safe:duration-400 cursor-pointer"
+      class="group p-1 w-fit min-w-[3.5rem] rounded-full shadow-inner motion-safe:transition-colors motion-safe:duration-400 cursor-pointer focus-visible:outline-offset-4"
       :class="{
         'bg-zinc-200': !isChecked,
-        'bg-emerald-600 dark:bg-emerald-200': props.useGreen && isChecked,
-        'bg-red-600 dark:bg-red-200': props.useRed && isChecked,
-        'bg-zinc-500': !useGreen && !useRed && isChecked,
+        'bg-blue-800 dark:bg-blue-200': props.useBlue && isChecked,
+        'bg-red-800 dark:bg-red-200': props.useRed && isChecked,
+        'bg-zinc-500': !useBlue && !useRed && isChecked,
       }"
       role="switch"
       :aria-checked="isChecked"
