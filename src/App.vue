@@ -41,7 +41,38 @@ function ensureDisplay() {
     </div>
   </TheTopBar>
 
-  <router-view />
+  <router-view v-slot="{ Component }">
+    <transition mode="out-in">
+      <component :is="Component"></component>
+    </transition>
+  </router-view>
 
   <TheFooter />
 </template>
+
+<style lang="scss">
+@media (prefers-reduced-motion: no-preference) {
+  .v- {
+    &leave- {
+      &to {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+
+      &active {
+        transition: all 0.4s ease-in;
+      }
+    }
+    &enter- {
+      &from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+
+      &active {
+        transition: all 0.4s ease-out;
+      }
+    }
+  }
+}
+</style>
