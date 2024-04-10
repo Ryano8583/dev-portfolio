@@ -4,8 +4,9 @@ const props = defineProps<{
   to: string;
 }>();
 
-function select(event: KeyboardEvent | any) {
-  event.target?.click();
+function select(event: KeyboardEvent) {
+  const target = event.target as HTMLElement;
+  target?.click();
 }
 </script>
 
