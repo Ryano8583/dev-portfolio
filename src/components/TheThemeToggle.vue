@@ -8,7 +8,7 @@ useDarkMode({ from: "class" });
 </script>
 
 <template>
-  <BaseToggle id="dark-mode" v-model="isDarkMode" hide-label>
+  <BaseToggle id="dark-mode" v-model="isDarkMode">
     Dark mode
     <template #icon>
       <FontAwesomeIcon :icon="['far', isDarkMode ? 'moon' : 'sun']" />
