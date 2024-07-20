@@ -6,6 +6,7 @@ import {
   faChevronCircleDown,
   faCircleInfo,
   faCircleQuestion,
+  faGear,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -15,6 +16,7 @@ library.add(
   faChevronCircleDown,
   faCircleInfo,
   faCircleQuestion,
+  faGear,
   faLinkedin,
   faMoon,
   faSquareGithub,

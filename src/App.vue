@@ -5,6 +5,7 @@ import { scrollListener, showTopBar } from "./composables/topBar";
 
 import BaseNavigation from "./components/BaseNavigation.vue";
 import BaseNavLink from "./components/BaseNavLink.vue";
+import BaseNavMenu from "./components/BaseNavMenu.vue";
 
 import TheFooter from "./components/TheFooter.vue";
 import TheHeader from "./components/TheHeader.vue";
@@ -35,9 +36,10 @@ function ensureDisplay() {
         <BaseNavLink to="portfolio" @focusin="ensureDisplay"
           >Portfolio</BaseNavLink
         >
+        <BaseNavMenu>
+          <TheThemeToggle @focusin="ensureDisplay" />
+        </BaseNavMenu>
       </BaseNavigation>
-
-      <TheThemeToggle @focusin="ensureDisplay" />
     </div>
   </TheTopBar>
 
