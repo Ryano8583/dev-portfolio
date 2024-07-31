@@ -18,8 +18,10 @@
     "@fortawesome/free-regular-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/vue-fontawesome": "^3.0.6",
+    "@intlify/unplugin-vue-i18n": "^4.0.0",
     "@vercel/analytics": "^1.2.2",
     "vue": "^3.4.15",
+    "vue-i18n": "^9.13.1",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
