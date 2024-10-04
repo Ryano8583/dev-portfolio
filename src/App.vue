@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import { RouterView } from "vue-router";
+import { useI18n } from "vue-i18n";
 import { scrollListener, showTopBar } from "./composables/topBar";
 
 import BaseNavigation from "./components/BaseNavigation.vue";
@@ -12,6 +13,10 @@ import TheHeader from "./components/TheHeader.vue";
 import TheLanguageSelector from "./components/TheLanguageSelector.vue";
 import TheThemeToggle from "./components/TheThemeToggle.vue";
 import TheTopBar from "./components/TheTopBar.vue";
+
+const { t } = useI18n({
+  useScope: "local",
+});
 
 onMounted(() => {
   setTimeout(() => {
@@ -29,14 +34,16 @@ function ensureDisplay() {
 
 <template>
   <TheTopBar>
-    <TheHeader>Ryan Overmyer's Resume & Portfolio</TheHeader>
+    <TheHeader>{{ t("appTitle") }}</TheHeader>
 
     <div class="flex flex-grow justify-end items-center gap-3 sm:gap-5">
       <BaseNavigation>
-        <BaseNavLink to="resume" @focusin="ensureDisplay">Resume</BaseNavLink>
-        <BaseNavLink to="portfolio" @focusin="ensureDisplay"
-          >Portfolio</BaseNavLink
-        >
+        <BaseNavLink to="resume" @focusin="ensureDisplay">{{
+          t("navLink1")
+        }}</BaseNavLink>
+        <BaseNavLink to="portfolio" @focusin="ensureDisplay">{{
+          t("navLink2")
+        }}</BaseNavLink>
         <BaseNavMenu>
           <TheLanguageSelector />
           <TheThemeToggle @focusin="ensureDisplay" />
@@ -80,3 +87,38 @@ function ensureDisplay() {
   }
 }
 </style>
+
+<i18n lang="yaml">
+{
+  en:
+    {
+      appTitle: "Ryan Overmyer's Resume & Portfolio",
+      navLink1: "Resume",
+      navLink2: "Portfolio",
+    },
+  es:
+    {
+      appTitle: "Currículum y Portafolio de Ryan Overmyer",
+      navLink1: "Reanudar",
+      navLink2: "Portafolio",
+    },
+  fr:
+    {
+      appTitle: "CV et Portfolio de Ryan Overmyer",
+      navLink1: "CV",
+      navLink2: "Portefeuille",
+    },
+  hi:
+    {
+      appTitle: "रयान ओवरमायर का बायोडाटा और पोर्टफोलियो",
+      navLink1: "फिर शुरू करना",
+      navLink2: "पोर्टफोलियो",
+    },
+  zh:
+    {
+      appTitle: "Ryan Overmyer 的简历和作品集",
+      navLink1: "恢复",
+      navLink2: "文件夹",
+    },
+}
+</i18n>
