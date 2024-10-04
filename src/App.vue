@@ -9,6 +9,7 @@ import BaseNavMenu from "./components/BaseNavMenu.vue";
 
 import TheFooter from "./components/TheFooter.vue";
 import TheHeader from "./components/TheHeader.vue";
+import TheLanguageSelector from "./components/TheLanguageSelector.vue";
 import TheThemeToggle from "./components/TheThemeToggle.vue";
 import TheTopBar from "./components/TheTopBar.vue";
 
@@ -37,6 +38,7 @@ function ensureDisplay() {
           >Portfolio</BaseNavLink
         >
         <BaseNavMenu>
+          <TheLanguageSelector />
           <TheThemeToggle @focusin="ensureDisplay" />
         </BaseNavMenu>
       </BaseNavigation>
