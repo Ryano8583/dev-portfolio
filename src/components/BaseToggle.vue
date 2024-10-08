@@ -37,7 +37,20 @@ function toggle() {
 </script>
 
 <template>
-  <div class="flex gap-3 items-center sm:gap-5" role="none">
+  <div
+    class="flex gap-3 items-center whitespace-nowrap sm:gap-5 cursor-pointer"
+    :class="{
+      'rounded-md hover:outline hover:outline-1 hover:outline-offset-4 focus-visible:outline-offset-4':
+        !hideLabel,
+    }"
+    role="switch"
+    :aria-checked="isChecked"
+    :aria-labelledby="id"
+    tabindex="0"
+    @click="toggle"
+    @keydown.enter="toggle"
+    @keydown.space.prevent="toggle"
+  >
     <div
       :id="id"
       class="text-gray-900 dark:text-gray-50"
@@ -47,20 +60,13 @@ function toggle() {
     </div>
 
     <div
-      class="group p-1 w-fit min-w-[3.5rem] rounded-full shadow-inner motion-safe:transition-colors motion-safe:duration-400 cursor-pointer focus-visible:outline-offset-4"
+      class="group p-1 w-fit min-w-[3.5rem] rounded-full shadow-inner motion-safe:transition-colors motion-safe:duration-400"
       :class="{
         'bg-zinc-200': !isChecked,
         'bg-blue-800 dark:bg-blue-200': props.useBlue && isChecked,
         'bg-red-800 dark:bg-red-200': props.useRed && isChecked,
-        'bg-zinc-500': !useBlue && !useRed && isChecked,
+        'bg-zinc-400': !useBlue && !useRed && isChecked,
       }"
-      role="switch"
-      :aria-checked="isChecked"
-      :aria-labelledby="id"
-      tabindex="0"
-      @click="toggle"
-      @keydown.enter="toggle"
-      @keydown.space.prevent="toggle"
     >
       <div
         class="flex justify-center p-1 w-6 min-h-[1.5rem] text-gray-50 bg-zinc-800 rounded-full shadow group-hover:shadow-md group-focus-visible:shadow-md motion-safe:duration-400"
