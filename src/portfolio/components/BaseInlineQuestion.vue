@@ -1,9 +1,14 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import { useI18n } from "vue-i18n";
 import { FontAwesomeIcon } from "../../composables/faLibrary";
 
 import BaseButton from "@/components/BaseButton.vue";
 import LayoutColumn from "@/components/LayoutColumn.vue";
+
+const { t } = useI18n({
+  useScope: "local",
+});
 
 const isExpanded = ref(false);
 
@@ -27,7 +32,8 @@ function toggle() {
         use-blue
         :aria-expanded="isExpanded"
         @click="toggle"
-        >{{ isExpanded ? "Hide" : "Reveal" }} Answer</BaseButton
+        >{{ isExpanded ? t("expanded") : t("collapsed") }}
+        {{ t("baseline") }}</BaseButton
       >
       <div class="mt-4" :class="isExpanded ? '' : 'invisible hidden'">
         <slot name="answer" />
@@ -35,3 +41,13 @@ function toggle() {
     </LayoutColumn>
   </aside>
 </template>
+
+<i18n lang="yaml">
+{
+  en: { baseline: "answer", collapsed: "Reveal", expanded: "Hide" },
+  es: { baseline: "respuesta", collapsed: "Revelar", expanded: "Esconder" },
+  fr: { baseline: "répondre", collapsed: "Révéler", expanded: "Cacher" },
+  hi: { baseline: "उत्तर", collapsed: "प्रकट करना", expanded: "छिपाना" },
+  zh: { baseline: "回答", collapsed: "揭示", expanded: "隐藏" },
+}
+</i18n>
